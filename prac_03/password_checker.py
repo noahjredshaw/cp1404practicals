@@ -18,8 +18,7 @@ def main():
     print("\t1 or more numbers")
     if IS_SPECIAL_CHARACTER_REQUIRED:
         print("\tand 1 or more special characters: ", SPECIAL_CHARACTERS)
-    # password = input("> ")
-    password = "H12!!"
+    password = input("> ")
     while not is_valid_password(password):
         print("Invalid password!")
         password = input("> ")
@@ -44,10 +43,8 @@ def is_valid_password(password):
             number_of_digit += 1
         elif character in SPECIAL_CHARACTERS:
             number_of_special += 1
-
-
-
-    # TODO: if any of the 'normal' counts are zero, return False
+    if number_of_lower == 0 or number_of_upper == 0 or number_of_digit == 0:
+        return False
 
     # TODO: if special characters are required, then check the count of those
     # and return False if it's zero
