@@ -42,6 +42,8 @@ print(numbers)
 large_numbers = [number for number in numbers if number > 9]
 print(large_numbers)
 
-# TODO: (more advanced) use a list comprehension and the join string method
+# use a list comprehension and the join string method
 # to create a string (not list) of the last names for those full names longer than 11 characters
 # the result should be: 'Harlem, Hendrix, Lovelace'
+large_last_names_string = ", ".join([name.split(" ")[1] for name in full_names if len(name) > 11])
+print(large_last_names_string)
