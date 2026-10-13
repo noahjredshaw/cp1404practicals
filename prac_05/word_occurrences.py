@@ -1,16 +1,18 @@
 """
 Word Occurrences
 Estimate: 25 minutes
-Actual:   ... minutes
+Actual:   11! minutes
 """
 
-text_to_count = {}
-# text = input("Text: ")
+word_to_count = {}
+longest_word = 0
 text = "this is a collection of words of nice words this is a fun thing it is"
 for word in text.split():
-    if word in text_to_count:
-        text_to_count[word] += 1
+    if word in word_to_count:
+        word_to_count[word] += 1
     else:
-        text_to_count[word] = 1
-for word, count in sorted(text_to_count.items()):
-    print(f"{word} : {count}")
+        word_to_count[word] = 1
+    if len(word) > longest_word:
+        longest_word = len(word)
+for word, count in sorted(word_to_count.items()):
+    print(f"{word:{longest_word}} : {count}")
