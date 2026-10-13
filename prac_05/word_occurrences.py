@@ -6,7 +6,7 @@ Actual:   11! minutes
 
 word_to_count = {}
 longest_word = 0
-text = "this is a collection of words of nice words this is a fun thing it is"
+text = input("Text: ")
 for word in text.split():
     if word in word_to_count:
         word_to_count[word] += 1
