@@ -22,4 +22,5 @@ for i, guitar in enumerate(guitars):
     if len(guitar.name) > len(longest_name):
         longest_name = guitar.name
     vintage_string = "(vintage)" if guitar.is_vintage() else ""
-    print(f"Guitar {i + 1}: {guitar.name:>{len(longest_name)}} ({guitar.year}), worth $ {guitar.cost:10,.2f} {vintage_string}")
+    print(
+        f"Guitar {i + 1}: {guitar.name:>{len(longest_name)}} ({guitar.year}), worth $ {guitar.cost:10,.2f} {vintage_string}")
