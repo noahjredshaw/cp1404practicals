@@ -1,6 +1,6 @@
 """
-Estimated time: 20
-Actual time:
+Estimated time: 5 minutes
+Actual time: 3 minutes
 """
 import datetime
 
